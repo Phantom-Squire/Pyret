@@ -6,7 +6,7 @@ include tables
 include image
 
 # load the file
-shelter-sheet = load-spreadsheet("19m1bUCQo3fCzmSEmWMjTfnmsNIMqiByLytHE0JYtnQM")
+shelter-sheet = load-spreadsheet("1bCeCfEf-3kklbbehCDkMRDtHr7bgElUCtu3kdswwOBY")
 
 # load the 'animals' sheet as a table
 animals-table = load-table: name, species, gender, age, fixed, legs, pounds, weeks
@@ -15,3 +15,5 @@ end
 
 sasha-cat-f = animals-table.row-n(0)
 felix-cat-f = animals-table.row-n(4)
+boo-boo-dog = animals-table.row-n(9)
+toggle = animals-table.row-n(8)
