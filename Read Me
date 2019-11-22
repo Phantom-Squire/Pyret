@@ -1,0 +1,17 @@
+# include the DataScience Library
+include shared-gdrive("Bootstrap-DataScience-v1.4.arr", "189UgLQQ3Eag5JtrxpBjFzLMS3BO9rA21")
+# include Google Sheets and Tables library
+include gdrive-sheets
+include tables
+include image
+
+# load the file
+shelter-sheet = load-spreadsheet("19m1bUCQo3fCzmSEmWMjTfnmsNIMqiByLytHE0JYtnQM")
+
+# load the 'animals' sheet as a table
+animals-table = load-table: name, species, gender, age, fixed, legs, pounds, weeks
+  source: shelter-sheet.sheet-by-name("pets", true)
+end
+
+sasha-cat-f = animals-table.row-n(0)
+felix-cat-f = animals-table.row-n(4)
