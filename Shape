@@ -4,3 +4,5 @@ shape1 = triangle(50, "solid", "red")
 shape2 = circle(20, "solid", "blue")
 age = ???
 name = ???
+
+https://code.pyret.org/editor#share=14cE5vqTXUWIvo0lvie93K9c8fP9kvhi2&v=36e00a0
