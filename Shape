@@ -1,0 +1,3 @@
+include image
+# Follow the directions for Assignment 3 under Defining Values
+shape1 = triangle(50, "solid", "red")
