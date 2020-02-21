@@ -5,5 +5,5 @@ shape2 = circle(20, "solid", "blue")
 age = 15
 name = ("Angel, Brian")
 prize = star(199, "solid", "yellow")
-big = ???
-tilt = ???
+big = scale(5, prize)
+tilt = rotate(45, prize)
