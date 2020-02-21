@@ -1,0 +1,6 @@
+include image
+# Follow the directions for Assignment 3 under Defining Values
+shape1 = triangle(50, "solid", "red")
+shape2 = circle(20, "solid", "blue")
+age = circle(20, "solid", "blue")
+name = circle(20, "solid", "blue")
