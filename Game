@@ -3,4 +3,6 @@ include image
 shape1 = triangle(50, "solid", "red")
 shape2 = circle(20, "solid", "blue")
 age = 15
-name = ("Angel, brain")
+name = ("Angel, Brian")
+
+prize = star(199, "solid", "yellow")
