@@ -134,6 +134,10 @@ fun line-length(a, b):
 end
 
 distance :: Number, Number, Number, Number -> Number
+px
+py
+cx
+cy
 # The distance between two points on screen:
 # We have the player's x and y, and a character's x and y.
 # How far apart are they?
