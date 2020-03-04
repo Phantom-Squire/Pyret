@@ -151,10 +151,11 @@ is-collision :: Number, Number, Number, Number -> Boolean
 # We have the player's x and y, and a character's x and y.
 # We can ask how far apart they are.  Did they collide?
 # EXAMPLEs:
+examples:
   is-collision(4, 3, 0, 0) is distance(4, 3, 0, 0) < 50
   is-collision(8, 6, 0, 0) is distance(8, 6, 0, 0) < 50
-fun is-collision(px, py, cx, cy):
-  false
+end
+fun is-collision(px, py, cx, cy): distance(px, py, cx, cy) < 50
 end
 
 
