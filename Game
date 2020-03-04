@@ -8,15 +8,15 @@ TITLE-COLOR = "white"
 # Graphics - danger, target, projectile and player images
 BACKGROUND = image-url("https://code.pyret.org/shared-image-contents?sharedImageId=1Iz3vSqWq1OYqAjKUrQLc3AyO7eWxLa2G")
 DANGER = image-url("https://code.pyret.org/shared-image-contents?sharedImageId=1pmao0tagvFuirhC3FyUSRqP7fPB0O4vM")
-TARGET = image-url("https://code.pyret.org/shared-image-contents?sharedImageId=1rMZ80qhZ3NSWylHM3-1Mc11dtFxkTS-N")
+TARGET = image-url("https://code.pyret.org/shared-image-contents?sharedImageId=19Y43jLHwjzmLJyIAjMMZoNdPen14ktpQ")
 PLAYER = image-url("https://code.pyret.org/shared-image-contents?sharedImageId=1pjdJ-0vW8dD_Ra_7hu_9nUHDiXVilZZ1")
 
 # here's a screenshot of the game, with the PLAYER at (320, 240),
 # the TARGET at (400 500) and the DANGER at (150, 200)
 SCREENSHOT = 
-put-image(DANGER, 150, 200)
-put-image(TARGET, 500, 400) 
-put-image(PLAYER, 320, 240, BACKGROUND)
+  put-image(DANGER, 150, 200,
+    put-image(TARGET, 500, 400, 
+      put-image(PLAYER, 320, 240, BACKGROUND)))
 
 ######################################################
 # 1. Making the Danger and the Target Move
@@ -95,13 +95,13 @@ update-player :: Number, Number, String -> Number
 # EXAMPLEs:
 examples:
   update-player(200,220, "up") is 220 + 20
-  update-player(200,220, "up") is 2 + 20
+  update-player(200,220, "up") is 200 + 20
   update-player(350, 10, "down") is 10 - 20
-  update-player(320, 10, "down") is 10 - 20
+  update-player(320, 10, "down") is 320 - 20
 end
 fun update-player(x, y, key):
-  if string-equal(key, up): y + 20
-    else if string-equal(key, down): y - 20
+  if string-equal(key, "up"): y + 20
+  else if string-equal(key, "down"): y - 20
     else: y
   end
 end
@@ -134,10 +134,6 @@ fun line-length(a, b):
 end
 
 distance :: Number, Number, Number, Number -> Number
-px
-py
-cx
-cy
 # The distance between two points on screen:
 # We have the player's x and y, and a character's x and y.
 # How far apart are they?
@@ -145,7 +141,6 @@ cy
 examples:
   distance(4, 3, 0, 0) is num-sqrt((num-sqr(line-length(4,0)) + num-sqr(line-length(3,0))))
   distance(8, 6, 0, 0) is num-sqrt((num-sqr(line-length(8,0)) + num-sqr(line-length(6,0))))
-  distance(px, py, cx, cy) is num-sqrt((num-sqr(line-length(4,0)) + num-sqr(line-length(3,0))))
 end
 fun distance(px, py, cx, cy): num-sqrt((num-sqr(line-length(4,0)) + num-sqr(line-length(3,0))))
 end
