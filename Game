@@ -14,10 +14,9 @@ PLAYER = image-url("https://code.pyret.org/shared-image-contents?sharedImageId=1
 # here's a screenshot of the game, with the PLAYER at (320, 240),
 # the TARGET at (400 500) and the DANGER at (150, 200)
 SCREENSHOT = 
-  put-image(DANGER, 150, 200,
-    put-image(TARGET, 500, 400, 
-      put-image(PLAYER, 320, 240, BACKGROUND)))
-
+put-image(DANGER, 150, 200)
+put-image(TARGET, 500, 400) 
+put-image(PLAYER, 320, 240, BACKGROUND)
 
 ######################################################
 # 1. Making the Danger and the Target Move
