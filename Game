@@ -7,9 +7,9 @@ TITLE-COLOR = "white"
 
 # Graphics - danger, target, projectile and player images
 BACKGROUND = image-url("https://code.pyret.org/shared-image-contents?sharedImageId=1Iz3vSqWq1OYqAjKUrQLc3AyO7eWxLa2G")
-DANGER = triangle(30, "solid", "red")
-TARGET = circle(20, "solid", "green")
-PLAYER = image-url("http://www.bootstrapworld.org/clipart/Monsters/Robot.png")
+DANGER = image-url("https://code.pyret.org/shared-image-contents?sharedImageId=1pmao0tagvFuirhC3FyUSRqP7fPB0O4vM")
+TARGET = image-url("https://code.pyret.org/shared-image-contents?sharedImageId=1rMZ80qhZ3NSWylHM3-1Mc11dtFxkTS-N")
+PLAYER = image-url("https://code.pyret.org/shared-image-contents?sharedImageId=1pjdJ-0vW8dD_Ra_7hu_9nUHDiXVilZZ1")
 
 # here's a screenshot of the game, with the PLAYER at (320, 240),
 # the TARGET at (400 500) and the DANGER at (150, 200)
@@ -59,18 +59,22 @@ is-safe-left :: Number -> Boolean
 # Is the character visible on the left side of the screen?
 
 # Write an EXAMPLE that makes this true, and one that makes this false:
-
-fun is-safe-left(x):
-  true
+examples:
+  is-safe-left(50) is 50 > -50
+  is-safe-left(-51) is -51 > -50
+end
+  fun is-safe-left(x): x > -50
 end
 
 is-safe-right :: Number -> Boolean
 # Is the character visible on the right side of the screen?
 
 # Write an EXAMPLE that makes this true, and one that makes this false:
-
-fun is-safe-right(x):
-  true
+examples:
+  is-safe-right(500) is 500 < 690
+  is-safe-right(700) is 700 < 690
+end
+fun is-safe-right(x): x < 690
 end
 
 
@@ -80,9 +84,8 @@ is-onscreen :: Number, Number -> Boolean
 # EXAMPLEs:
 
 fun is-onscreen(x, y):
-  true
+  is-safe-left(x) and is-safe-right(x)
 end
-
 
 ######################################################
 # 3. Get our Player moving!
@@ -91,11 +94,18 @@ update-player :: Number, Number, String -> Number
 # given the player's x-coordinate, y-coordinate, and a direction, output the NEXT y
 
 # EXAMPLEs:
-
-fun update-player(x, y, key):
-  y
+examples:
+  update-player(200,220,"up") is 220 + 20
+  update-player(200,220,"up") is 220 + 20
+  update-player(350, 10,"down") is 10 - 20
+  update-player(320, 10,"down") is 10 - 20
 end
-
+fun update-player(x, y, key):
+  if string-equals(key, up): y + 20
+    if string-equals(key, down): y - 20
+    else: y+0
+  end
+end
 
 ######################################################
 # 4. Collisions: When the player is close enough to the Target
@@ -129,9 +139,11 @@ distance :: Number, Number, Number, Number -> Number
 # We have the player's x and y, and a character's x and y.
 # How far apart are they?
 # EXAMPLEs:
-
-fun distance(px, py, cx, cy):
-  0
+examples:
+  distance(4, 3, 0, 0) is num-sqrt((num-sqr(line-length(4,0)) + num-sqr(line-length(3,0))))
+  distance(8, 6, 0, 0) is num-sqrt((num-sqr(line-length(8,0)) + num-sqr(line-length(6,0))))
+  distance(px, py, cx, cy) is num-sqrt((num-sqr(line-length(4,0)) + num-sqr(line-length(3,0))))
+  fun distance(px, py, cx, cy): num-sqrt((num-sqr(line-length(4,0)) + num-sqr(line-length(3,0))))
 end
 
 is-collision :: Number, Number, Number, Number -> Boolean 
@@ -139,8 +151,8 @@ is-collision :: Number, Number, Number, Number -> Boolean
 # We have the player's x and y, and a character's x and y.
 # We can ask how far apart they are.  Did they collide?
 # EXAMPLEs:
-
-
+  is-collision(4, 3, 0, 0) is distance(4, 3, 0, 0) < 50
+  is-collision(8, 6, 0, 0) is distance(8, 6, 0, 0) < 50
 fun is-collision(px, py, cx, cy):
   false
 end
