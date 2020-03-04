@@ -100,9 +100,9 @@ examples:
   update-player(320, 10, "down") is 10 - 20
 end
 fun update-player(x, y, key):
-  if string-equals(key, up): y + 20
-    if string-equals(key, down): y - 20
-    else: y+0
+  if string-equal(key, up): y + 20
+    else if string-equal(key, down): y - 20
+    else: y
   end
 end
 
@@ -163,7 +163,6 @@ mystery = radial-star(5, 5, 3, "solid", "silver")
 fun update-mystery(x, y):
   x
 end
-
 
 ######################################################
 # PROVIDED CODE
