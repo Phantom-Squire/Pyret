@@ -95,7 +95,7 @@ update-player :: Number, Number, String -> Number
 # EXAMPLEs:
 examples:
   update-player(200,220, "up") is 220 + 20
-  update-player(200,220, "up") is 220 + 20
+  update-player(200,220, "up") is 2 + 20
   update-player(350, 10, "down") is 10 - 20
   update-player(320, 10, "down") is 10 - 20
 end
