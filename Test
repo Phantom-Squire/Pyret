@@ -86,26 +86,9 @@ end
 
 
 # Determines if the coordinate is on the screen
-examples:
-  is-safe-left(50) is 50 > -50
-  is-safe-left(-51) is -51 > -50
-end
-  fun is-safe-left(x): x > -50
-end
-is-safe-right :: Number -> Boolean
-examples:
-  is-safe-right(500) is 500 < 690
-  is-safe-right(700) is 700 < 690
-end
-fun is-safe-right(x): x < 690
-end
 
-is-onscreen :: Number, Number -> Boolean
-fun is-onscreen(x, y):
-  is-safe-left(x) and is-safe-right(x)
-end
 
-start(is-onscreen)
+
 
 ######################################################
 # 3. Get our Player moving!
