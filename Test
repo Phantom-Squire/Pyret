@@ -85,7 +85,8 @@ fun is-onscreen(x, y):
 end
 
 
-# Determines if the coordinate is on the screen
+# Determines if the player is on the screen
+
 
 
 
