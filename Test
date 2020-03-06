@@ -2,14 +2,14 @@ include image
 import shared-gdrive("bootstrap1-game-teachpack.arr", "0B32bNEogmncOa0w3SzVackFaVGc") as T
 
 # 0. Game title: Write the title of your game here
-TITLE = ("")
+TITLE = ("Mario Bros.")
 TITLE-COLOR = ("white")
 
 # Graphics - danger, target, projectile and player images
 BACKGROUND = image-url("https://code.pyret.org/shared-image-contents?sharedImageId=1IlSpcuUuxoH0y_Y6juPE-ew37KSc-lTg")
-DANGER = scale(0.5,  image-url(""))
-TARGET = scale(0.5,  image-url(""))
-PLAYER = scale(0.5,  image-url(""))
+DANGER = scale(0.5, image-url("https://code.pyret.org/shared-image-contents?sharedImageId=1pmao0tagvFuirhC3FyUSRqP7fPB0O4vM"))
+TARGET = scale(0.1, image-url("https://code.pyret.org/shared-image-contents?sharedImageId=1rMZ80qhZ3NSWylHM3-1Mc11dtFxkTS-N"))
+PLAYER = scale(0.5, image-url("https://code.pyret.org/shared-image-contents?sharedImageId=1pjdJ-0vW8dD_Ra_7hu_9nUHDiXVilZZ1"))
 
 # here's a screenshot of the game, with the PLAYER at (320, 240),
 # the TARGET at (400 500) and the DANGER at (150, 200)
@@ -86,11 +86,26 @@ end
 
 
 # Determines if the coordinate is on the screen
+examples:
+  is-safe-left(50) is 50 > -50
+  is-safe-left(-51) is -51 > -50
+end
+  fun is-safe-left(x): x > -50
+end
+is-safe-right :: Number -> Boolean
+examples:
+  is-safe-right(500) is 500 < 690
+  is-safe-right(700) is 700 < 690
+end
+fun is-safe-right(x): x < 690
+end
 
-# EXAMPLEs:
+is-onscreen :: Number, Number -> Boolean
+fun is-onscreen(x, y):
+  is-safe-left(x) and is-safe-right(x)
+end
 
-
-
+start(is-onscreen)
 
 ######################################################
 # 3. Get our Player moving!
