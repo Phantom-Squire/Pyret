@@ -1,5 +1,5 @@
 include image
-import shared-gdrive("bootstrap1-game-teachpack.arr", "0B32bNEogmncOa0w3SzVackFaVGc") as T
+import shared-gdrive("Ninja Cat Code", "0B32bNEogmncOSEF0LWI2ZmVZTVE") as N
 
 # 0. Game title: Write the title of your game here
 TITLE = "My Game"
