@@ -7,6 +7,6 @@ TITLE-COLOR = "white"
 
 # Graphics - danger, target, projectile and player images
 BACKGROUND = image-url("http://www.bootstrapworld.org/clipart/Backgrounds/Night%20Forest.jpg")
-DANGER = image-url("http://www.bootstrapworld.org/clipart/Monsters/Robot.png")
-TARGET = image-url("http://www.bootstrapworld.org/clipart/Monsters/Robot.png")
-PLAYER = image-url("http://www.bootstrapworld.org/clipart/Monsters/Robot.png")
+DANGER = image-url("")
+TARGET = image-url("")
+PLAYER = image-url("")
