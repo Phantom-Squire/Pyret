@@ -6,10 +6,11 @@ TITLE = "My Game"
 TITLE-COLOR = "white"
 
 # Graphics - danger, target, projectile and player images
-BACKGROUND = image-url("https://code.pyret.org/shared-image-contents sharedImageId=1Iz3vSqWq1OYqAjKUrQLc3AyO7eWxLa2G")
-DANGER = image-url("https://code.pyret.org/shared-image-contents?sharedImageId=1pmao0tagvFuirhC3FyUSRqP7fPB0O4vM")
-TARGET = image-url("https://code.pyret.org/shared-image-contents?sharedImageId=19Y43jLHwjzmLJyIAjMMZoNdPen14ktpQ")
-PLAYER = image-url("https://code.pyret.org/shared-image-contents?sharedImageId=1pjdJ-0vW8dD_Ra_7hu_9nUHDiXVilZZ1")
+BACKGROUND = image-url("http://www.bootstrapworld.org/clipart/Backgrounds/Night%20Forest.jpg")
+DANGER = triangle(30, "solid", "red")
+TARGET = circle(20, "solid", "green")
+PLAYER = image-url("http://www.bootstrapworld.org/clipart/Monsters/Robot.png")
+
 # here's a screenshot of the game, with the PLAYER at (320, 240),
 # the TARGET at (400 500) and the DANGER at (150, 200)
 SCREENSHOT = 
