@@ -7,9 +7,9 @@ TITLE-COLOR = ("white")
 
 # Graphics - danger, target, projectile and player images
 BACKGROUND = image-url("https://code.pyret.org/shared-image-contents?sharedImageId=1IlSpcuUuxoH0y_Y6juPE-ew37KSc-lTg")
-DANGER = scale(0.5,  image-url("https://code.pyret.org/shared-image-contents?sharedImageId=1-2jdvKoxoNQHYT8-5WLOAxumBXMoLKae"))
-TARGET = scale(0.35, image-url("https://code.pyret.org/shared-image-contents?sharedImageId=1-e-FQk81s1fZHCGo3lNI7eZllBAXFBOa"))
-PLAYER = scale(0.35, image-url("https://code.pyret.org/shared-image-contents?sharedImageId=1-EFNMP5OKKmBB4rpYUxLH_c2EF9wXIww"))
+DANGER = scale(0.5,  image-url(""))
+TARGET = scale(0.5,  image-url(""))
+PLAYER = scale(0.5,  image-url(""))
 
 # here's a screenshot of the game, with the PLAYER at (320, 240),
 # the TARGET at (400 500) and the DANGER at (150, 200)
