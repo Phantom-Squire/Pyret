@@ -2,7 +2,7 @@ include image
 import shared-gdrive("bootstrap1-game-teachpack.arr", "0B32bNEogmncOa0w3SzVackFaVGc") as T
 
 # 0. Game title: Write the title of your game here
-TITLE = ("")
+TITLE = ("Mario Bros.")
 TITLE-COLOR = ("white")
 
 # Graphics - danger, target, projectile and player images
@@ -86,8 +86,6 @@ end
 
 
 # Determines if the coordinate is on the screen
-
-# EXAMPLEs:
 
 
 
