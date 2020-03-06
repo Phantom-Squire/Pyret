@@ -1,4 +1,3 @@
-
 include image
 import shared-gdrive("bootstrap1-game-teachpack.arr", "0B32bNEogmncOa0w3SzVackFaVGc") as T
 
