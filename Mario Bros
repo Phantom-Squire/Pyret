@@ -54,39 +54,24 @@ end
 #    We need to know that they're gone!  
 #    Are they on the screen?
 
-is-safe-left :: Number -> Boolean
-# Is the character visible on the left side of the screen?
-
-# Write an EXAMPLE that makes this true, and one that makes this false:
+# Determines if the coordinate is on the screen
 examples:
-  is-safe-left(50) is 50 > -50
-  is-safe-left(-51) is -51 > -50
+  is-safe-up(50) is 50 > -50
+  is-safe-up(-51) is -51 > -50
 end
-fun is-safe-left(x):
+fun is-safe-up(x):
   x > -50
 end
 
-is-safe-right :: Number -> Boolean
-# Is the character visible on the right side of the screen?
+is-safe-down :: Number -> Boolean
+# Is the character visible on the down the screen?
 examples:
-  is-safe-right(500) is 500 < 690
-is-safe-right(700) is 700 < 690
+  is-safe-down(500) is 500 < 690
+is-safe-down(700) is 700 < 690
 end
- fun is-safe-right(x):
+ fun is-safe-down(x):
   x < 690
 end
-
-# Write an EXAMPLE that makes this true, and one that makes this false:
-
-
-is-onscreen :: Number, Number -> Boolean
-fun is-onscreen(x, y):
-  is-safe-left(x) and is-safe-right(x)
-end
-
-
-# Determines if the coordinate is on the screen
-
 
 
 
