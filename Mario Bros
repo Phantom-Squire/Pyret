@@ -6,7 +6,7 @@ TITLE = ("Mario Bros.")
 TITLE-COLOR = ("white")
 
 # Graphics - danger, target, projectile and player images
-BACKGROUND = image-url("https://code.pyret.org/shared-image-contents?sharedImageId=1IlSpcuUuxoH0y_Y6juPE-ew37KSc-lTg")
+BACKGROUND = image-url("https://code.pyret.org/shared-image-contents?sharedImageId=1pl50X61O7EXnhtScCgK1W0QOwFfa2D_l")
 DANGER = scale(0.5, image-url("https://code.pyret.org/shared-image-contents?sharedImageId=1pmao0tagvFuirhC3FyUSRqP7fPB0O4vM"))
 TARGET = scale(0.1, image-url("https://code.pyret.org/shared-image-contents?sharedImageId=1rMZ80qhZ3NSWylHM3-1Mc11dtFxkTS-N"))
 PLAYER = scale(0.5, image-url("https://code.pyret.org/shared-image-contents?sharedImageId=1pjdJ-0vW8dD_Ra_7hu_9nUHDiXVilZZ1"))
@@ -85,8 +85,7 @@ fun is-onscreen(x, y):
 end
 
 
-# Determines if the player is on the screen
-
+# Determines if the coordinate is on the screen
 
 
 
